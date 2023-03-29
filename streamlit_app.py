@@ -1,12 +1,16 @@
 import streamlit as st
 
-# Define a interface do usuário
-def main():
-    st.title("Meu primeiro aplicativo Streamlit")
-    st.write("Bem-vindo ao meu aplicativo!")
-    name = st.text_input("Digite o seu nome:")
-    st.write(f"Olá, {name}!")
+# Botão
+if st.button("Clique aqui"):
+    st.write("Botão clicado!")
 
-if __name__ == "__main__":
-    main()
+# Caixa de seleção
+option = st.selectbox(
+    "Escolha uma opção",
+    ["Opção 1", "Opção 2", "Opção 3"]
+)
+st.write("Você escolheu a opção:", option)
 
+# Slider
+value = st.slider("Escolha um valor", 0, 100)
+st.write("Você escolheu o valor:", value)
