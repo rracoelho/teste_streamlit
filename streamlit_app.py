@@ -20,4 +20,4 @@ st.write("Você escolheu o valor:", value)
 x = np.linspace(0, 10, value)
 y = np.sin(x)
 
-st.line_chart(x=x, y=y)
+st.line_chart(y)
