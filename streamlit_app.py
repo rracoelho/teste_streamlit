@@ -1,6 +1,5 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Botão
 if st.button("Clique aqui"):
@@ -21,10 +20,4 @@ st.write("Você escolheu o valor:", value)
 x = np.linspace(0, 10, value)
 y = np.sin(x)
 
-# Cria um gráfico de linhas
-fig, ax = plt.subplots()
-ax.plot(x, y)
-ax.set_xlabel("Tempo (s)")
-ax.set_ylabel("Amplitude")
-st.pyplot(fig)
-
+st.line_chart(x=x, y=y)
